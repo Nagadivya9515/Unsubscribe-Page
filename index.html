@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.white-content-container {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.page-title {
+    width:100%;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 2%;
+}
+
+.container-body {
+    padding: 20px;
+}
+
+.pad-30 {
+    padding: 30px;
+}
+
+form {
+    margin: 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.disabled-section {
+    opacity: 0.7;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.left {
+    float: left;
+}
+
+.global-notification {
+    margin-right: 10px;
+}
+
+.fields-wrapper {
+    overflow: hidden;
+}
+
+label {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    display: block;
+}
+
+p {
+    margin: 5px 0;
+    color: #777;
+    margin-left: 8px;
+}
+
+.subpanel {
+    padding-left: 20px;
+    margin-top: 10px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.subpanel-toggle {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subpanel-toggle:hover {
+    text-decoration: underline;
+}
+
+.detail-row {
+    margin-bottom: 10px;
+}
+
+.class-description {
+    font-style: italic;
+    color: #888;
+}
+
+.all-emails-off {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.description {
+    font-style: italic;
+    color: #888;
+}
+.hidden {display:none;}
+
+        .container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: #01234f;
+        }
+        .logo img {
+            vertical-align: middle;
+        }
+        .nav {
+           float: left;
+           /* position: relative; */
+           display: inline-block;
+           padding-right: 20px;
+        }
+        .nav ul {
+            list-style-type: none;
+            margin: none;
+            padding:0;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 15px 0 10px 30px;
+            color: #fff;
+        }
+       
+        .sign {
+            color: #000 !important;
+            background-color: #EDA404;
+            border-radius: 1em;
+            width: 52px;
+            padding: 12px 15px !important;
+            margin-top: 7px;
+            margin-left: 8px;
+            margin: 7px auto;
+        }
+        #search {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#search input[type="text"] {
+    padding-right: 30px; /* Adjust space for the icon */
+    width: 200px; /* Adjust the width as needed */
+}
+
+#search::after {
+    content: '\1F50D'; /* Unicode for a search icon */
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(111, 0, 255); /* Adjust the icon color */
+    pointer-events: none;
+}
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 848px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+        color: white;
+        padding-top: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo" style=" width : 280px;
+        margin: 0 ;"><a href="https://edzorblaw.com/#spu-8506">
+    <img src="http://cdn.mcauto-images-production.sendgrid.net/7c83a91e7c423767/9e21d4cb-e4a8-4f36-bded-58c33be7eb14/917x268.png" style="max-width: 100%;" width="280px" />
+</a>
+</div>
+<div class="nav">
+    <ul id="nav-links">
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house"></i>Home</a
+            >
+          </li>
+          <li><a href="">
+          <i class="fa-solid fa-folder"></i>My Course
+          </a></li>
+          
+          <li>
+            <a href="#"><div id="search" style="display:inline-block;border:0.5px solid rgb(111, 0, 255);">
+                <input type="text" style="border:none; outline: none;padding: 3% 0;" /></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="sign">
+            Sign in</a
+            >
+          </li>
+    </ul>
+    <div id="menu-icon" onclick="toggleNav()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+</div>
+    </div>
+    <div class="white-content-container">
+        <div class="container-header clear">
+            <h3 class="page-title left">Email Notifications</h3>
+                                        </div>
+        <div class="container-body pad-30">
+            <form autocomplete="off" id="settings-notifications-form" action="/settings/email-notifications?uuid=3ad9bd70-8ca7-11ec-8429-0a0cc8fe5e67" method="post">
+<input type="hidden" value="Jzq2ulVkA2SiDm0j9h89Plbn3U3eblMNSDKs73YUWtTKE873pSPkCtKtoQQy4ipvAzbhdVaHKvD9LAqLX9xa49wrYjE1" name="YII_CSRF_TOKEN" class="initialized">    <div class="section disabled-section">
+    <fieldset class="no-margin-top clear">
+        <input type="checkbox" data-global-notification-type="class_discussion" name="NotificationSetting[class_discussion]" id="NotificationSetting_class_discussion" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_class_discussion">Updates from Classes You're Taking</label>                <p>
+                Announcements, events, and tips and tricks.                </p>
+                                <p>
+                    <a href="javascript:;" class="subpanel-toggle">
+                        Edit Individual Classes                            (1)
+                    </a>
+                </p>
+                <ul id="class-notifications" class="subpanel hidden">
+                                                <li class="detail-row clear">
+                            <input type="checkbox" data-parent-class-id="355011" value="1" name="class-notification-355011" checked="checked" disabled="true" class="left initialized">
+                            <div class="fields-wrapper">
+                                <label for="class-notification-355011">Video Editing with Final Cut Pro X - From Beginner to YouTuber</label>
+                                <p class="class-description">Ali Abdaal, Doctor + YouTuber</p>
+                            </div>
+                        </li>
+                                        </ul>
+                        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="user_discussion" name="NotificationSetting[user_discussion]" id="NotificationSetting_user_discussion" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_user_discussion">Updates from Teacher Discussions</label>                <p>
+                Public Discussions outside of a class that teachers share to all of their followers.                </p>
+                                <p>
+                    <a href="javascript:;" class="subpanel-toggle">
+                        Edit Individual Teachers                            (1)
+                    </a>
+                </p>
+                <ul id="discussion-notifications" class="subpanel hidden">
+                                                <li class="detail-row clear">
+                            <input type="checkbox" data-child-id="6598235" value="1" name="dicussion-notification-6598235" checked="checked" disabled="true" class="left initialized">
+                            <div class="fields-wrapper">
+                                <label for="discussion-notification-6598235">Ali Abdaal</label>
+                            </div>
+                        </li>
+                                        </ul>
+                        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="project_replies" name="NotificationSetting[project_replies]" id="NotificationSetting_project_replies" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_project_replies">Activity on Your Projects</label>                <p class="description">
+                Someone likes or comments on a project you've created.                </p>
+                        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="discussion_reply" name="NotificationSetting[discussion_reply]" id="NotificationSetting_discussion_reply" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_discussion_reply">Activity on Your Discussions and Comments</label>                <p class="description">
+                Someone replies to a comment or discussion you've created.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="comment_reply" name="NotificationSetting[comment_reply]" id="NotificationSetting_comment_reply" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_comment_reply">Replies to Comments</label>                <p class="description">
+                Someone replies to a comment that you previously replied to.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="follow" name="NotificationSetting[follow]" id="NotificationSetting_follow" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_follow">New Follower</label>                <p class="description">
+                Someone on Skillshare follows you.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="new_class_by_followee" name="NotificationSetting[new_class_by_followee]" id="NotificationSetting_new_class_by_followee" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_new_class_by_followee">New Class by Someone You Follow</label>                <p class="description">
+                Someone you follow creates a Class.                </p>
+        </div>
+    </fieldset>
+</div>
+<div class="section disabled-section">
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="recommendations" name="NotificationSetting[recommendations]" id="NotificationSetting_recommendations" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_recommendations">Personalized Class Recommendations</label>                <p class="description">
+                Weekly recommendations tailored to your interests.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="new_launches_content" name="NotificationSetting[new_launches_content]" id="NotificationSetting_new-launches-content" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_new_launches_content">New Launches and Content</label>                <p class="description">
+                Learn about new classes, launches, and more on Skillshare.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="newsletter" name="NotificationSetting[newsletter]" id="NotificationSetting_newsletter" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_newsletter">Updates from Skillshare</label>                <p class="description">
+                Occasional product and company announcements.                </p>
+        </div>
+    </fieldset>
+    <fieldset class="clear">
+        <input type="checkbox" data-global-notification-type="promotions_discounts" name="NotificationSetting[promotions_discounts]" id="NotificationSetting_promotions-discounts" value="1" checked="checked" disabled="true" class="global-notification left initialized">
+        <div class="fields-wrapper">
+            <label for="NotificationSetting_promotions_discounts">Promotions and Discounts</label>                <p class="description">
+                Stay in the loop on how to get discounts on Skillshare membership and more.                </p>
+        </div>
+    </fieldset>
+</div>
+<fieldset class="clear">
+    <input type="checkbox" data-global-notification-type="all" name="all-general-emails-off" id="all-general-emails-off" value="1" checked="checked" class="global-notification all-emails-off left initialized">
+    <div class="fields-wrapper">
+        <label for="all-general-emails-off">
+            Don't Send Me Any Email            </label>
+        <p>
+            You will only receive critical account emails.            </p>
+    </div>
+</fieldset>
+</form>            </div>
+    </div>
+<!-- linear-gradient(180deg, #004166 0%, #002033 100%), linear-gradient(180deg, #0E4B58 0%, #0F5F70 100%) -->
+    <footer style="background:linear-gradient(180deg, #004166 0%, #002033 100%); color: #fff; padding: 20px 20px 20px 100px;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      
+          <!-- Column 1 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <!-- <h3 style="color: #fff; margin-bottom: 10px;">Company</h3> -->
+          <img src="https://Operations.EdzorbMailer.com/uploads/1724761071.png" style="width: 120px" />
+          <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/about" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">About Us</a></li>
+              <li><a href="/careers" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Careers</a></li>
+              <li><a href="/press" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Press</a></li>
+              <li><a href="/contact" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 2 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Popular Courses</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/faq" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;background-color: #EDA404;padding: 4px;border-radius: 6px;color:#000;">Premium+ Plan</a></li>
+              <li><a href="/help-center" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Mark Enhancement Program</a></li>
+              <li><a href="/terms" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Elite Plan</a></li>
+              <li><a href="/privacy" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Fastrack Crash Courses</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 3 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Other Links</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/consulting" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Free Resources</a></li>
+              <li><a href="/mentorship" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">What Makes Edzorb Law Unique</a></li>
+              <li><a href="/webinars" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Syllabus</a></li>
+              <li><a href="/resources" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 4 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Join Our Free Mentorship</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="https://www.facebook.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Sign Up Now For Free Mentorship</a></li>
+              <li><input type="email" placeholder="Enter email..." style="padding: 10px;border-radius:10px;outline: none;border: none;"/><a href="https://www.twitter.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;" class="sign">Sign Up</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Joined by 10,000+ students</a></li>
+            </ul>
+          </div>
+      
+        </div>
+      
+        <!-- Bottom Footer Note -->
+        <div style="text-align: center; padding: 10px 0; background-color: #222;">
+          <p style="margin: 0; color: #aaa;font-size:0.8em;">© 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+      
+    <script src="index.js">
+  
+    </script>
+</body>
+</html>
